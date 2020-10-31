@@ -1,10 +1,25 @@
+import bcrypt from "bcryptjs";
 const data = {
+  users: [
+    {
+      name: "Justin",
+      email: "admin@adminsonly.com",
+      password: bcrypt.hashSync("1234", 8),
+      isAdmin: true,
+    },
+    {
+      name: "Hank",
+      email: "HankHill@stricklandpropane.com",
+      password: bcrypt.hashSync("1234", 8),
+      isAdmin: false,
+    },
+  ],
   products: [
     {
-      _id: "1",
       name: "Rona Shirt 2020",
+      category: "Shirts",
       image: "/images/prod1.jpg",
-      price: 29.99,
+      price: 29,
       countInStock: 123,
       brand: "RandoBrand",
       rating: 4.5,
@@ -12,10 +27,10 @@ const data = {
       description: "good stuff here",
     },
     {
-      _id: "2",
       name: "Meh Shirt",
+      category: "Shirts",
       image: "/images/prod2.jpg",
-      price: 20.99,
+      price: 20,
       countInStock: 10,
       brand: "Zswift",
       rating: 4.5,
@@ -23,10 +38,10 @@ const data = {
       description: "good stuff here",
     },
     {
-      _id: "3",
       name: "Happy Shirt",
+      category: "Shirts",
       image: "/images/prod3.jpg",
-      price: 21.99,
+      price: 21,
       countInStock: 20,
       brand: "Rand",
       rating: 4.5,
@@ -34,10 +49,10 @@ const data = {
       description: "good stuff here",
     },
     {
-      _id: "4",
       name: "Boring Shirt",
+      category: "Shirts",
       image: "/images/prod4.jpg",
-      price: 9.99,
+      price: 9,
       countInStock: 0,
       brand: "Ranomadd",
       rating: 4.5,
@@ -45,10 +60,10 @@ const data = {
       description: "good stuff here",
     },
     {
-      _id: "5",
       name: "Questionable Shirt",
+      category: "Pants",
       image: "/images/prod5.jpg",
-      price: 30.99,
+      price: 30,
       countInStock: 15,
       brand: "Nike",
       rating: 4.5,
@@ -56,10 +71,10 @@ const data = {
       description: "good stuff here",
     },
     {
-      _id: "6",
       name: "Fleek Shirt",
+      category: "Pants",
       image: "/images/prod6.jpg",
-      price: 3.99,
+      price: 3,
       countInStock: 12,
       brand: "Adidas",
       rating: 4.5,
